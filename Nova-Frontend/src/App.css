@@ -121,6 +121,25 @@
 }
 
 /* -----------------Inicio estilos del HOME----------- */
+#inputBuscador input {
+  width: 100%;
+  background: rgba(97, 32, 188, 0.1);;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 35px;
+  border: 1px solid rgb(255, 255, 255, 0.5);
+  border-right: 1px solid rgb(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #fff;
+  box-shadow: 0 5px 15px rgb(0, 0, 0, 0.05);
+}    
+#inputBuscador input::placeholder {
+  color: #fff;
+}  
+
 .main{
   background: whitesmoke url("../src/multimedia/fondo.png") fixed ;
   min-height: 100vh;
