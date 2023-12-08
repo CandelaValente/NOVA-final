@@ -31,19 +31,30 @@ export function Buscador() {
         setBusqueda(event.target.value);
     };
 
+    const handleBuscarClick = async () => {
+        try {
+            const response = await axios.get('/api/products', {
+                params: {
+                    partialCategory: filtroCategoria,
+                    partialName: busqueda, // Agregar el parámetro de búsqueda por nombre
+                },
+            });
+            setResultadosFiltrados(response.data);
+        } catch (error) {
+            console.error('Error al buscar productos:', error);
+        }
+    };
+
     return (
         <div id="inputBuscador">
-            {/* Selector de categorías */}
             <select value={filtroCategoria} onChange={handleCategoriaChange}>
                 <option value="Todos">Todos</option>
                 <option value="Fotografía">Fotografía</option>
-                <option value="desarrollopersonal"></option>
-                <option value="musica"></option>
-                <option value="diseño"></option>
-                
+                <option value="desarrollopersonal">Desarrollo Personal</option>
+                <option value="musica">Música</option>
+                <option value="diseño">Diseño</option>
             </select>
 
-            {/* Campo de búsqueda */}
             <input
                 type="text"
                 placeholder="Buscar..."
@@ -51,7 +62,8 @@ export function Buscador() {
                 onChange={handleBusquedaChange}
             />
 
-            {/* Resultados de la búsqueda */}
+            <button onClick={handleBuscarClick}>Buscar</button>
+
             <ul>
                 {resultadosFiltrados.map((item) => (
                     <li key={item._id}>{item.name} - {item.category}</li>
@@ -60,4 +72,3 @@ export function Buscador() {
         </div>
     );
 };
-

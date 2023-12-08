@@ -125,7 +125,7 @@
 
 /* -----------------Inicio estilos del HOME----------- */
 #inputBuscador input {
-  width: 100%;
+  width: 90%;
   background: rgba(97, 32, 188, 0.1);
   ;
   border: none;
@@ -992,7 +992,7 @@ footer .containerFooter div ul li {
 .titulo_cursos {
   display: flex;
   justify-content: center;
-  color: whititulo_cursoste;
+  color: white;
   font-size: 2rem;
   text-shadow: 0 0 20px rgba(255, 255, 255, 0.693);
 
