@@ -3,21 +3,19 @@ POST http://localhost:3009/api/products/create
 Content-Type: application/json
 
 {
-    "category": "tecnicatura",
-    "description":"sadasd",
-    "image":"asddas",
-    "price":5.99,
-    "name":"algo"
+    "category": "santo",
+    "description":"santo",
+    "image":"santo",
+    "price":1,
+    "name":"santo"
 }
-###
-DELETE http://localhost:3008/api/products/create
 
 ###
 
-DELETE http://localhost:3008/api/products/656ccc0576ba186d07719203
+DELETE http://localhost:3009/api/products/656f5694cbcb5b2372b3f21d
 
 ###
-PUT http://localhost:3009/api/products/656ccce02902a8de90526b5b
+PUT http://localhost:3009/api/products/656dca35a8b460e5939f9d0f
 Content-Type: application/json
 
 {

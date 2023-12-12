@@ -110,24 +110,11 @@
   scroll-behavior: smooth;
 }
 
-/* -----Boton para volver al inicio */
-#scrollToTopButton {
-  position: fixed;
-  bottom: 20px;
-  right: 50px;
-  display: none;
-  /* Para ocultarlo inicialmente */
-  cursor: pointer;
-  /* transition: .5s; */
-  /* position: relative; */
-  z-index: 5000;
-}
-
+m
 /* -----------------Inicio estilos del HOME----------- */
-#inputBuscador input {
+.inputBuscador label input {
   width: 90%;
   background: rgba(97, 32, 188, 0.1);
-  ;
   border: none;
   outline: none;
   padding: 10px 20px;
@@ -141,7 +128,7 @@
   box-shadow: 0 5px 15px rgb(0, 0, 0, 0.05);
 }
 
-#inputBuscador input::placeholder {
+.inputBuscador label input::placeholder {
   color: #fff;
 }
 
@@ -963,31 +950,6 @@ footer .containerFooter div ul li {
 
 }
 
-
-/* 
-.imgNubes, .imgNubes2, .imgNubes3 {
-  position: absolute;
-  bottom: -20rem;
-  max-width: initial;
-}
-
-.imgNubes{
-  width: 100%;
-  left: 0;
-  right: -6rem;
-}
-
-.imgNubes2{
-  width: 80%;
-  right: -4rem;
-}
-
-.imgNubes2{
-  width: 80%;
-  right: -4rem;
-  transform: scaleX(-1);
-} */
-
 /* ----------------------------------TODOS LOS CURSOS---------- */
 .titulo_cursos {
   display: flex;
@@ -1094,27 +1056,92 @@ footer .containerFooter div ul li {
   color: white;
 }
 
-.btn_carrito {
-  font-size: larger;
-  background-color: var(--color-acento);
-  border-radius: 5px;
-  padding: 5px 10px;
-  color: white;
-  border: unset;
-  cursor: pointer;
-  padding: auto;
-  /* margin: auto; */
+.admin-panel {
+  font-family: var(--Monsterrat);
+  padding: 20px;
+  background-color: rgba(69, 58, 73, 0.3);
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
 }
 
-#cuenta-carrito {
-  position: absolute;
-  /* el nav es el realtive  */
-  background-color: var(--color-acento);
-  border-radius: 100%;
-  display: inline-block;
-  height: 25px;
-  line-height: 25px;
-  aspect-ratio: 1;
+.admin-panel h2 {
   text-align: center;
-  /* margin-bottom: 15px; */
+  margin-bottom: 20px;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.438);
+}
+
+.admin-panel form {
+  margin-bottom: 20px;
+}
+
+.admin-panel form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.admin-panel form input[type='text'],
+.admin-panel form input[type='number'] {
+  width: 90%;
+  padding: 8px;
+  margin-bottom: 10px;
+  background: rgba(97, 32, 188, 0.1);
+  border-radius: 10px;
+  border: 1px solid rgb(255, 255, 255, 0.5);
+  border-right: 1px solid rgb(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+  font-size: 16px;
+}
+
+.admin-panel form button {
+  padding: 8px 15px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.admin-panel form button:last-child {
+  margin-right: 0;
+}
+
+.admin-panel table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.admin-panel th,
+.admin-panel td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.admin-panel th {
+  background-color: #f2f2f2;
+}
+
+.admin-panel tbody tr:hover {
+  background-color: #e0e0e0;
+}
+
+.admin-panel table button {
+  padding: 5px 10px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.admin-panel p.error-message {
+  color: red;
+  font-style: italic;
+}
+.btn{
+  color: #030221;
+  background-color: white;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.432);
+  padding: 3px;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
 }

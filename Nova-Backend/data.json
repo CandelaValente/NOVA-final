@@ -253,13 +253,6 @@
             "img":"../img/productos/1.png",
             "descripcion":"Curso de Guitarra"
 
-        },
-        {
-            "id": 28,
-            "categoria": "fotografia",
-            "nombre": "Adobe Photoshop Avanzado",
-            "precio": 5,
-            "img":"../img/productos/1.png"
         }
 
     ],

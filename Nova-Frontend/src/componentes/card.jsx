@@ -1,5 +1,4 @@
-import { FormEdit } from "./forms/formEdit";
-import { Link } from 'react-router-dom';
+
 
 export function Card(props) {
     const card = props.card
@@ -18,7 +17,6 @@ export function Card(props) {
 
 
 
-            <Link to={"/editar-curso"}>EditarCurso</Link>
         </>
     );
 }

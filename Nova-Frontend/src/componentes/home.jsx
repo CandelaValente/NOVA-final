@@ -1,6 +1,6 @@
 
 import curso from '../img/curso.png'
-import { FormNew } from '../componentes/forms/formNew.jsx';
+
 import { Link } from 'react-router-dom';
 import abrazoMundo from '../assets/abrazomundo.png'
 import abrazoEstrella from '../assets/abrazoestrella.png'
@@ -8,6 +8,7 @@ import comunidadNova from '../assets/comunidadnova.png'
 import soporte from '../assets/soporte.png'
 import tutores from '../assets/tutores.png'
 import { CardContainer } from './cardContainer.jsx';
+import { FormularioContacto } from './formularioContacto.jsx';
 
 export function Home() {
     return (
@@ -64,7 +65,7 @@ export function Home() {
                     <button id="prev-page" className="pagination-button">Anterior</button>
                     <span id="current-page" className="pagination-info">Página 1</span>
                     <button id="next-page" className="pagination-button">Siguiente</button>
-                    <FormNew></FormNew>
+                    
                 </div>
             </div>
             <section className="sectionNosotros" id="Nosotros">
@@ -111,6 +112,7 @@ export function Home() {
                     </div>
                 </div>
             </section>
+            <FormularioContacto></FormularioContacto>
         </main>
     );
 }
