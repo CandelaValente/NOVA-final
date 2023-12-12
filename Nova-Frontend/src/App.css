@@ -133,7 +133,7 @@ m
 }
 
 .main {
-  background: whitesmoke url("../src/multimedia/fondo.png") fixed;
+  background: whitesmoke url("./assets/multimedia/fondo.png") fixed;
   min-height: 100vh;
 }
 
@@ -574,7 +574,7 @@ m
 
 body {
   /* Imagen fondo canva fija */
-  background: whitesmoke url(./assets/img/banner-bg.png) fixed;
+  background: whitesmoke url(./assets/banner-bg.png) fixed;
 }
 
 /* ======================================= SECCIÓN NOSOTROS */

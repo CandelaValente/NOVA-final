@@ -1,5 +1,5 @@
 
-import curso from '../img/curso.png'
+import curso from '../assets/img/curso.png'
 
 import { Link } from 'react-router-dom';
 import abrazoMundo from '../assets/abrazomundo.png'
@@ -7,6 +7,7 @@ import abrazoEstrella from '../assets/abrazoestrella.png'
 import comunidadNova from '../assets/comunidadnova.png'
 import soporte from '../assets/soporte.png'
 import tutores from '../assets/tutores.png'
+import astro_volando from '../assets/multimedia/astro_volando.png'
 import { CardContainer } from './cardContainer.jsx';
 import { FormularioContacto } from './formularioContacto.jsx';
 
@@ -27,7 +28,7 @@ export function Home() {
                         <Link className="registro" id="btn_registro" to={"/registrar-usuario"}>¡Registrate!</Link>
                     </div>
                 </article>
-                <img className="astro_volando" src="./multimedia/astro_volando.png" alt="astro" />
+                <img className="astro_volando" src={astro_volando} alt="astro" />
             </section>
 
             {/* Boton para ir hacia el home */}

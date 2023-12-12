@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import coheteLogo from '../multimedia/cohete_logo.png'
+import coheteLogo from '../assets/multimedia/cohete_logo.png'
 
 
 export function Nav() {
