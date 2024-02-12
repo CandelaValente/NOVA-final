@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 export function FormInicio({ onClose }) {
@@ -15,20 +15,6 @@ export function FormInicio({ onClose }) {
         setShowFormInicio(false);
     };
 
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
-    const [error, setError] = useState('');
-    const navigate = useNavigate();
-
-    const handleLogin = () => {
-        if (username === 'admin' && password === 'admin') {
-            navigate('/admin-panel'); // Puedes redirigir a la ruta deseada después del inicio de sesión exitoso
-        } else {
-            setError('Usuario o contraseña incorrectos');
-        }
-    };
-    
-
     return (
         <>
 
@@ -38,43 +24,25 @@ export function FormInicio({ onClose }) {
                     <h2 className="titulo">Inicio de Sesion</h2>
                     <span className="close" id="btn_cerrar" onClick={onClose} >
                         <Link to={"/"}>
-                            <img className="icon_close" src="./multimedia/close.svg" alt="" />
+                        <img className="icon_close" src="./multimedia/close.svg" alt="" />
                         </Link>
                     </span>
                     <div className="inputForm">
-                        <label htmlFor="username">Usuario:</label>
-                        <input type="text"
-                            placeholder="Ingrese su usuario"
-                            id="username" autoComplete="email"
-                            value={username}
-                            onChange={(e) => setUsername(e.target.value)}
-                        />
+                        <input type="email" placeholder="Email" id="email" autoComplete="email" />
                     </div>
-
                     <div className="inputForm">
-                        <label htmlFor="password">Contraseña:</label>
-                        <input type="password"
-                            placeholder="Ingrese su contraseña"
-                            id="password"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                        />
-
+                        <input type="password" placeholder="Contraseña" id="password" />
                     </div>
-
-
-                    <button type="button" className="btn" id="btn_inicio" onClick={handleLogin}>
-                        Iniciar Sesión
-                    </button>
-                    {error && <p>{error}</p>}
-
+                    <div className="inputForm">
+                        <input type="submit" value="Enviar" id="btn_inicio" />
+                    </div>
                     <p className="text">¿No tenes cuenta?
                         <a href="#" className="registro_inicio_sesion" >
-                            <Link to={"/registrar-usuario"}>¡Registrate!</Link>
+                        <Link to={"/registrar-usuario"}>¡Registrate!</Link>
                         </a> </p>
 
-                </form >
-            </div >
+                </form>
+            </div>
 
         </>
     );

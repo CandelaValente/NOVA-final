@@ -41,10 +41,8 @@ class ProductsModel {
         }
     }
 
-    static async createProduct(productData) {
-        let clientMongo;
-    
-        console.log('Datos recibidos en createProduct:', productData);
+    static async createProduct({ category, description, image, price, name }) {
+        let clientMongo; // Declaramos la variable clientMongo aquí para que esté disponible en todo el ámbito de la función
     
         try {
             clientMongo = await connectToMongoDB();
@@ -55,7 +53,11 @@ class ProductsModel {
     
             // Crear el producto en la base de datos
             const result = await clientMongo.db('nova').collection('productos').insertOne({
-                ...productData,
+                category,
+                description,
+                image,
+                price,
+                name,
             });
     
             if (result && result.insertedId) {
@@ -179,36 +181,6 @@ static async searchProductsByPartialName(partialName) {
         return { data: null, error: true };
     }
 }
-static async searchProductsByNameAndCategory(partialTerm) {
-    try {
-    const clientMongo = await connectToMongoDB();
-
-    if (!clientMongo) {
-        throw new Error('Error al conectar con MongoDB.');
-    }
-
-    const result = await clientMongo.db('nova').collection('productos')
-        .find({
-        $or: [
-            { name: { $regex: new RegExp(`^${partialTerm}`, 'i') } },
-            { category: { $regex: new RegExp(`^${partialTerm}`, 'i') } },
-        ],
-        })
-        .toArray();
-
-    await disconnectToMongoDB();
-
-    if (!result) {
-        return { data: null, error: true };
-    }
-
-    return { data: result, error: false };
-    } catch (error) {
-    console.error('Error en searchProductsByNameAndCategory:', error);
-    return { data: null, error: true };
-    }
-}
-
 
 }
 
